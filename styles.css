@@ -1,0 +1,249 @@
+@import "modern-normalize";
+
+:root {
+  line-height: 1.5;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --marK-size: calc(var(10rem) * 0.1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+p,
+ol,
+ul {
+  margin: 0;
+}
+
+ol[role="list"],
+ul[role="list"] {
+  list-style: none;
+  padding-inline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+h1 {
+  color: black;
+  font-size: 5em;
+  text-align: center;
+  font-weight: 900;
+}
+
+h2 {
+  color: #000;
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+h3 {
+  color: red;
+  font-size: 1.8rem;
+  text-align: center;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: aliceblue;
+  font-family: Arial, sans-serif;
+  grid-gap: 2rem;
+}
+#wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 6rem;
+}
+#game-board {
+  background-color: black;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  padding: 10px;
+  justify-content: center;
+  align-content: center;
+  border: 1px solid black;
+}
+div .cell {
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid darkcyan;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px darkcyan;
+  background-color: #000;
+}
+
+button {
+  background-color: darkcyan;
+  border: none;
+  color: aliceblue;
+  padding: 1.4rem 3rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.6rem;
+  margin: 4px 2px;
+  cursor: pointer;
+  box-shadow: cyan 0px 0px 10px;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  cursor: pointer;
+  color: #fff;
+  background-color: white;
+}
+
+.cell:hover {
+  background-color: #111;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+#result {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: center;
+  align-content: center;
+  border: 1px solid blue;
+  width: 30%;
+  background-color: darkcyan;
+  color: aliceblue;
+  padding: 1.4rem 3rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.6rem;
+  margin: 4px 2px;
+  margin: 0 auto;
+  cursor: pointer;
+  box-shadow: black 0px 0px 10px;
+}
+
+#restart-button:hover {
+  background-color: black;
+}
+
+/* Overlay styles */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 1); /* Semi-transparent background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.overlay-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  width: 30%;
+  height: 30%;
+  background-color: darkcyan;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+}
+
+.overlay-content h2 {
+  margin-bottom: 2rem;
+}
+
+.overlay-content input {
+  display: block;
+  width: 90%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.overlay-content button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: darkcyan;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.overlay-content button:hover {
+  background-color: #007b7b;
+}
+
+#start-game {
+  width: 10rem;
+  margin-top: 1.6rem;
+}
+
+#overlay-title {
+  display: block;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 5.6rem;
+  color: #fff;
+  padding-bottom: 3rem;
+}
+
+.score-box {
+  border: 1px solid #007b7b;
+  height: 20%;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 123, 123, 0.5); /* Subtle shadow with transparency */
+}
+
+.score-box > h2 {
+  padding: 1rem;
+  background-color: #000;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+
+  color: #fff;
+}
+
+.score-box > h3 {
+  font-size: 4rem;
+}
